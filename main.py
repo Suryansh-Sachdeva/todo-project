@@ -1,1 +1,1 @@
-i = str(input(""))
+print("Python programming language")
