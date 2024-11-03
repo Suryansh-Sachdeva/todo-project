@@ -1,2 +1,1 @@
-print("Choose between Add, Delete and Change")
-a = str(input(""))
+txt = str(input("Choose between Add, Delete and Change: "))
