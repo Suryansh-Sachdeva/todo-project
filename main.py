@@ -1,3 +1,6 @@
+from datetime import datetime
+now = datetime.now()
+dt_string = now.strftime("%d/%m/%Y %H:%M")
 txt = str(input("Choose between 'Add', 'Delete' and 'Change': "))
 if txt == "Add":
     add_content = str(input("Enter the command to add: "))
