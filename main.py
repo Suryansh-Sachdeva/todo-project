@@ -5,7 +5,7 @@ txt = str(input("Choose between 'Add', 'Delete' and 'Change': "))
 if txt == "Add":
     add_content = str(input("Enter the command to add: "))
     f = open("Commands.txt", "a")
-    f.write(dt_string + "     " + add_content + "\n")
+    f.write(dt_string + "  |  " + add_content + "\n")
     f.close()
 if txt == "Delete":
     def delete_line(filename, line_number):
@@ -42,5 +42,5 @@ if txt == "Change":
             print("File has", len(lines), "lines.")
     filename = "Commands.txt"
     line_number = int(input("Line number: "))
-    text = dt_string + "     " + input("Text: ")
+    text = dt_string + "  |  " + input("Text: ")
     replace_line(filename, line_number, text)
