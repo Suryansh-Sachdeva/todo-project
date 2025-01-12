@@ -1,6 +1,7 @@
 from datetime import datetime
 while (2+2 == 4):   
     now = datetime.now()
+    t_string = now.strftime("%H:%M")
     dt_string = now.strftime("%d/%m/%Y %H:%M")
     txt = str(input("Choose between 'Add', 'Delete', 'Change' and 'View by date': "))
     if txt == "Add":
@@ -42,8 +43,9 @@ while (2+2 == 4):
                 print("Line", line_number, "not in file.", end=" ")
                 print("File has", len(lines), "lines.")
         filename = "Commands.txt"
+        date = input("Enter the date: ")
         line_number = int(input("Line number: "))
-        text = dt_string + "  |  " + input("Text: ")
+        text = date + " " + t_string + "  |  " + input("Text: ")
         replace_line(filename, line_number, text)
     elif txt == "View by date":
         filename = "Commands.txt"
