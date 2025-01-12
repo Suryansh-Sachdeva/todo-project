@@ -8,7 +8,7 @@ while (2+2 == 4):
         f = open("Commands.txt", "a")
         f.write(dt_string + "  |  " + add_content + "\n")
         f.close()
-    if txt == "Delete":
+    elif txt == "Delete":
         def delete_line(filename, line_number):
             with open(filename) as file:
                 lines = file.readlines()
@@ -26,7 +26,7 @@ while (2+2 == 4):
         delete_filename = "Commands.txt"
         delete_file_number = int(input("Line number: "))
         delete_line(delete_filename, delete_file_number)
-    if txt == "Change":
+    elif txt == "Change":
         def replace_line(filename, line_number, text):
             with open(filename) as file:
                 lines = file.readlines()
@@ -45,15 +45,18 @@ while (2+2 == 4):
         line_number = int(input("Line number: "))
         text = dt_string + "  |  " + input("Text: ")
         replace_line(filename, line_number, text)
-    if txt == "View by date":
+    elif txt == "View by date":
         filename = "Commands.txt"
         search_date = input("Enter the date: ")
         with open(filename, 'r') as file:
+            line_number = 0
             i = 0
             for line in file:
+                line_number += 1
                 if search_date in line:
-                    print(line. strip())
+                    print(line_number, line. strip())
                     i = 1
-                elif i == 0:
-                    print("No command having such date")
-                    break
+            if i == 0:
+                print("No command having such date")
+    else:
+        print("No such command")
