@@ -2,7 +2,7 @@ from datetime import datetime
 while (2+2 == 4):   
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M")
-    txt = str(input("Choose between 'Add', 'Delete', 'Change' and 'View By Date': "))
+    txt = str(input("Choose between 'Add', 'Delete', 'Change' and 'View by date': "))
     if txt == "Add":
         add_content = str(input("Enter the command to add: "))
         f = open("Commands.txt", "a")
